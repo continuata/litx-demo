@@ -1,44 +1,14 @@
-import { html, render } from "./node_modules/lit-html/lit-html.js";
-import { autorun } from "./node_modules/mobx/lib/mobx.module.js";
+import { defroute } from "./node_modules/lit-router/index.js";
 
-import store, { Todo } from "./model.js";
+import TodoListView from "./components/todo-list-view/index.js";
+import HelpView from "./components/help/index.js";
+import { Router } from "./router.js";
 
-const TodoView = (todo) => html`
-  <li>
-    <input
-      type="checkbox"
-      checked=${todo.finished}
-      @click="${() => todo.toggle()}}"
-    />
-    ${todo.title}
-  </li>
-`;
+import store from "./model/index.js";
 
-const TodoListView = (todoList) => html`
-  <div>
-    <form
-      @submit=${(e) => {
-        e.preventDefault();
-        todoList.addTodo();
-        return false;
-      }}
-    >
-      <ul>
-        ${todoList.todos.map(TodoView)}
-      </ul>
-      <div>
-        Tasks left: ${todoList.unfinishedTodoCount}
-      </div>
-      <input
-        @change=${(e) => todoList.changeText(e.target.value)}
-        .value=${todoList.newText}
-      />
-      <input type="submit" value="Add" />
-    </form>
-  </div>
-`;
+const routes = {
+  index: [defroute``, TodoListView],
+  help: [defroute`#help`, HelpView],
+};
 
-autorun(() => {
-  console.log("Tasks left: " + store.unfinishedTodoCount);
-  render(TodoListView(store), document.body);
-});
+Router(routes, store);

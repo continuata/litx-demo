@@ -4,24 +4,10 @@ import {
   observable,
   action,
   extendObservable,
-} from "./node_modules/mobx/lib/mobx.module.js";
+} from "../node_modules/mobx/lib/mobx.module.js";
+import Todo from "./todo.js";
 
-export class Todo {
-  constructor(title) {
-    const id = Math.random();
-    extendObservable(this, { id, title, finished: false });
-  }
-  toggle() {
-    this.finished = !this.finished;
-  }
-}
-decorate(Todo, {
-  title: observable,
-  finished: observable,
-  toggle: action,
-});
-
-export class TodoList {
+class TodoList {
   constructor() {
     extendObservable(this, { todos: [], newText: "" });
   }
@@ -42,5 +28,4 @@ decorate(TodoList, {
   addTodo: action,
   changeText: action,
 });
-
-export default new TodoList();
+export default TodoList;
