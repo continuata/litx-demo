@@ -4,10 +4,10 @@ const TodoView = (todo) => html`
   <li>
     <input
       type="checkbox"
-      checked=${todo.finished}
-      @click="${() => todo.toggle()}}"
+      ?checked=${todo.finished}
+      @click="${() => todo.toggle()}"
     />
-    ${todo.title}
+    ${todo.title} | ${todo.finished}
   </li>
 `;
 export default TodoView;

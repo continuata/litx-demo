@@ -8,7 +8,6 @@ const TodoListView = (todoList) => html`
       @submit=${(e) => {
         e.preventDefault();
         todoList.addTodo();
-        return false;
       }}
     >
       <ul>
