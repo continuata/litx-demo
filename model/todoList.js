@@ -9,7 +9,7 @@ import Todo from "./todo.js";
 
 class TodoList {
   constructor() {
-    extendObservable(this, { todos: [], newText: "" });
+    extendObservable(this, { todos: [], newText: "", showCompleted: false });
   }
   get unfinishedTodoCount() {
     return this.todos.filter((todo) => !todo.finished).length;
@@ -21,11 +21,16 @@ class TodoList {
     this.todos.push(new Todo(this.newText));
     this.newText = "";
   }
+  toggleCompleted() {
+    this.showCompleted = !this.showCompleted;
+  }
 }
 decorate(TodoList, {
   todos: observable,
+  showCompleted: observable,
   unfinishedTodoCount: computed,
   addTodo: action,
   changeText: action,
+  toggleCompleted: action,
 });
 export default TodoList;
