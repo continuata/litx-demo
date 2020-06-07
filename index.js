@@ -1,6 +1,6 @@
 import { defroute } from "./node_modules/lit-router/index.js";
 
-import TodoListView from "./pages/todos/todo-list.js";
+import TodoListView from "./pages/todos/index.js";
 import HelpView from "./pages/help/index.js";
 import { Router } from "./router.js";
 

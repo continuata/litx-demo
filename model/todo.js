@@ -6,16 +6,16 @@ import {
 } from "../node_modules/mobx/lib/mobx.module.js";
 
 class Todo {
-  constructor(title) {
+  constructor(text) {
     const id = Math.random();
-    extendObservable(this, { id, title, finished: false });
+    extendObservable(this, { id, text, finished: false });
   }
   toggle() {
     this.finished = !this.finished;
   }
 }
 decorate(Todo, {
-  title: observable,
+  text: observable,
   finished: observable,
   toggle: action,
 });

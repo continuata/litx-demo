@@ -1,11 +1,22 @@
 import { html } from "../../node_modules/lit-html/lit-html.js";
 
 const AddTodoView = (todoList) =>
-  html`<input
+  html` <form
+    class="js-form"
+    @submit=${(e) => {
+      e.preventDefault();
+      todoList.addTodo();
+    }}
+  >
+    <input
+      autofocus
       type="text"
       @change=${(e) => todoList.changeText(e.target.value)}
+      aria-label="Enter a new todo item"
+      placeholder="E.g. Build a web app"
+      class="js-todo-input"
       .value=${todoList.newText}
     />
-    <input type="submit" value="Add" />`;
+  </form>`;
 
 export default AddTodoView;

@@ -21,16 +21,15 @@ class TodoList {
     this.todos.push(new Todo(this.newText));
     this.newText = "";
   }
-  toggleCompleted() {
-    this.showCompleted = !this.showCompleted;
+  removeTodo(id) {
+    this.todos.splice(id, 1);
   }
 }
 decorate(TodoList, {
   todos: observable,
-  showCompleted: observable,
   unfinishedTodoCount: computed,
   addTodo: action,
   changeText: action,
-  toggleCompleted: action,
+  removeTodo: action,
 });
 export default TodoList;
