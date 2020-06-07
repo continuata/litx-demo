@@ -51,4 +51,5 @@ const SVG = () => html` <svg>
     </symbol>
   </defs>
 </svg>`;
+
 export default SVG;

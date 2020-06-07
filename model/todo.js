@@ -19,4 +19,5 @@ decorate(Todo, {
   finished: observable,
   toggle: action,
 });
+
 export default Todo;

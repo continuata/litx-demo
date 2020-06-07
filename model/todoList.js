@@ -32,4 +32,5 @@ decorate(TodoList, {
   changeText: action,
   removeTodo: action,
 });
+
 export default TodoList;

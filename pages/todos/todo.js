@@ -20,4 +20,5 @@ const TodoView = (todo, index, todoList) =>
       <svg><use href="#delete-icon"></use></svg>
     </button>
   </li>`;
+
 export default TodoView;

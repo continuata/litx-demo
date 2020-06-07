@@ -19,4 +19,5 @@ const TodoListView = (todoList) =>
     </main>
     ${SVG()}
   </div>`;
+
 export default TodoListView;
