@@ -1,7 +1,7 @@
 # Todo app demo for lit-html and MobX with no building
 
 This app will only run on browsers supporting ES6
-It only requires 3 npm libraries to be installed to node_modules:-
+It only requires 3 npm libraries which it imports dynamically via unpkg:-
 
 - lit-html
 - lit-router
@@ -11,7 +11,6 @@ It only requires 3 npm libraries to be installed to node_modules:-
 
 ```
 npm i -g polymer-cli
-npm i
 ```
 
 ## running

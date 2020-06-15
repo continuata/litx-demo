@@ -1,6 +1,6 @@
-import { render } from "./node_modules/lit-html/lit-html.js";
-import { autorun } from "./node_modules/mobx/lib/mobx.module.js";
-import { routeTo } from "./node_modules/lit-router/index.js";
+import { render } from "https://unpkg.com/lit-html?module";
+import { routeTo } from "https://unpkg.com/lit-router/index.js";
+import { autorun } from "https://unpkg.com/mobx/lib/mobx.module.js";
 
 export const Router = (routes, store) => {
   const handleHashChange = () => {

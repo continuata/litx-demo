@@ -1,4 +1,4 @@
-import { defroute } from "./node_modules/lit-router/index.js";
+import { defroute } from "https://unpkg.com/lit-router/index.js";
 
 import TodoListView from "./pages/todos/index.js";
 import HelpView from "./pages/help/index.js";

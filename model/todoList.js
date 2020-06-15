@@ -4,7 +4,7 @@ import {
   observable,
   action,
   extendObservable,
-} from "../node_modules/mobx/lib/mobx.module.js";
+} from "https://unpkg.com/mobx/lib/mobx.module.js";
 import Todo from "./todo.js";
 
 class TodoList {
