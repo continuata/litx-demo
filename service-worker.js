@@ -8,9 +8,9 @@ if (workbox) {
   console.log(`Boo! Workbox didn't load 😬`);
 }
 
-const { registerRoute } = workbox.routing;
+// const { registerRoute } = workbox.routing;
 
-registerRoute(
-  ({ request }) => request.destination === "script"
-  /* ... */
-);
+// registerRoute(
+//   ({ request }) => request.destination === "script"
+//   /* ... */
+// );
