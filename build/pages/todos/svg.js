@@ -1,4 +1,4 @@
-import { html } from 'https://unpkg.com/lit-html@1.2.1/lit-html.js?module';
+import { html } from '../../libs/lit-html';
 
 const SVG = () => html` <svg>
   <defs>
