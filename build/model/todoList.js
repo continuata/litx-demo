@@ -4,12 +4,12 @@ import {
   observable,
   action,
   extendObservable,
-} from "https://unpkg.com/mobx/lib/mobx.module.js";
-import Todo from "./todo.js";
+} from 'https://unpkg.com/mobx@5.15.4/lib/mobx.module.js';
+import Todo from './todo.js';
 
 class TodoList {
   constructor() {
-    extendObservable(this, { todos: [], newText: "", showCompleted: false });
+    extendObservable(this, { todos: [], newText: '', showCompleted: false });
   }
   get unfinishedTodoCount() {
     return this.todos.filter((todo) => !todo.finished).length;
@@ -19,7 +19,7 @@ class TodoList {
   }
   addTodo() {
     this.todos.push(new Todo(this.newText));
-    this.newText = "";
+    this.newText = '';
   }
   removeTodo(id) {
     this.todos.splice(id, 1);

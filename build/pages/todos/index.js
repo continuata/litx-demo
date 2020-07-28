@@ -1,7 +1,7 @@
-import { html } from "https://unpkg.com/lit-html?module";
-import TodoView from "./todo.js";
-import AddTodoView from "./add-todo.js";
-import SVG from "./svg.js";
+import { html } from 'https://unpkg.com/lit-html@1.2.1/lit-html.js?module';
+import TodoView from './todo.js';
+import AddTodoView from './add-todo.js';
+import SVG from './svg.js';
 
 const TodoListView = (todoList) =>
   html`<div>

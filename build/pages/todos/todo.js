@@ -1,8 +1,8 @@
-import { html } from "https://unpkg.com/lit-html?module";
+import { html } from 'https://unpkg.com/lit-html@1.2.1/lit-html.js?module';
 
 const TodoView = (todo, index, todoList) =>
   html`<li
-    class="todo-item ${todo.finished ? "done" : ""}"
+    class="todo-item ${todo.finished ? 'done' : ''}"
     data-key="${todo.id}"
   >
     <input

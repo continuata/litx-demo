@@ -3,7 +3,7 @@ import {
   observable,
   action,
   extendObservable,
-} from "https://unpkg.com/mobx/lib/mobx.module.js";
+} from 'https://unpkg.com/mobx@5.15.4/lib/mobx.module.js';
 
 class Todo {
   constructor(text) {
